@@ -12,4 +12,18 @@ public class HelloRestController {
         return "Hello From Spring Boot";
     }
 
+    @GetMapping("/book")
+    public Book getBook(){
+        Book aBook = new Book();
+        aBook.setName("Man's Search For Meaning");
+        aBook.setAuthor("Victor E. Frankl");
+        return aBook;
+    }
+
+    @GetMapping("/movie")
+    public Movie getMovie(){
+        Movie aMovie = new Movie();
+        return aMovie;
+    }
+
 }
