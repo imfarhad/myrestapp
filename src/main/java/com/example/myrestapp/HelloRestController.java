@@ -25,5 +25,10 @@ public class HelloRestController {
         Movie aMovie = new Movie();
         return aMovie;
     }
+    
+    @GetMapping("/test-cicd")
+    public String test(){
+        return "For CI/CD test";
+    }
 
 }
