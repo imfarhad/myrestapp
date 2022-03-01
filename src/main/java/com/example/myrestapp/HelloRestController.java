@@ -31,4 +31,9 @@ public class HelloRestController {
         return "For CI/CD test";
     }
 
+    @GetMapping("/JenkinsFile-with-github-webhook")
+    public String jenkinsFileGithubWebhook() {
+        return "JenkinsFile with Github Webhook works!";
+    }
+
 }
