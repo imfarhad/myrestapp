@@ -33,7 +33,7 @@ public class HelloRestController {
 
     @GetMapping("/JenkinsFile-with-github-webhook")
     public String jenkinsFileGithubWebhook() {
-        return "JenkinsFile with Github Webhook works!";
+        return "Jenkinsfile with Github Webhook works!";
     }
 
 }
