@@ -18,5 +18,14 @@ node{
         
     	sh 'docker push farhadtx/myrestapp:1.0.0'
     }
+
+      stage ('K8S Deploy') {
+
+                kubernetesDeploy(
+                    configs: 'myrestapp/deployment.yaml',
+                    kubeconfigId: 'K8s',
+                    enableConfigSubstitution: true
+                    )
+        }
     
 }
