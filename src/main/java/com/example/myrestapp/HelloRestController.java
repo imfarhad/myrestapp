@@ -36,4 +36,9 @@ public class HelloRestController {
         return "Jenkinsfile with Github Webhook works!";
     }
 
+    @GetMapping("/hello-K8s")
+    public String helloK8s(){
+        return "CI-CD on K8s running!";
+    }
+
 }
