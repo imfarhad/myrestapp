@@ -22,7 +22,7 @@ node{
       stage ('K8S Deploy') {
 
                 kubernetesDeploy(
-                    configs: 'myrestapp/deployment.yaml',
+                    configs: 'deployment.yaml',
                     kubeconfigId: 'K8s',
                     enableConfigSubstitution: true
                     )
