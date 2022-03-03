@@ -26,29 +26,4 @@ public class HelloRestController {
         return aMovie;
     }
     
-    @GetMapping("/test-cicd")
-    public String test(){
-        return "For CI/CD test";
-    }
-
-    @GetMapping("/JenkinsFile-with-github-webhook")
-    public String jenkinsFileGithubWebhook() {
-        return "Jenkinsfile with Github Webhook works!";
-    }
-
-    @GetMapping("/hello-kubernetes")
-    public String helloK8s(){
-        return "CI-CD on K8s running!";
-    }
-
-    @GetMapping("/hello-push")
-    public String helloK8Push(){
-        return "PUSH on CI-CD on K8s running!";
-    }
-
-    @GetMapping("/hello-again")
-    public String helloAgain(){
-        return "Hello Hello Again";
-    }
-
 }
