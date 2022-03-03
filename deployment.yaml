@@ -28,6 +28,6 @@ spec:
       containers:
         - name: myrestapp
           image: farhadtx/myrestapp # Image that will be used to containers in the cluster
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always
           ports:
             - containerPort: 8080 # The port that the container is running on in the cluster
