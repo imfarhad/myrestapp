@@ -8,7 +8,7 @@ node{
     }
 
     stage('Build Docker Image'){
-    	sh 'docker build . -t farhadtx/myrestapp'
+    	sh 'docker build . -t farhadtx/myrestapp:${BUILD_NUMBER}'
     }
     
     stage('Push Docker Image'){
@@ -16,7 +16,8 @@ node{
             sh "docker login -u farhadtx -p ${dockerHubPassword}"
         }
         
-    	sh 'docker push farhadtx/myrestapp'
+    	sh 'docker push farhadtx/myrestapp:${BUILD_NUMBER}'
+    	sh "sed -i 's/#BUILD_NUMBER/${BUILD_NUMBER}/g' deployment.yaml"
     }
 
       stage ('K8S Deploy') {
