@@ -41,4 +41,10 @@ public class HelloRestController {
         return "CI-CD on K8s running!";
     }
 
+    @GetMapping("/hello-push")
+    public String helloK8Push(){
+        return "PUSH on CI-CD on K8s running!";
+    }
+
+
 }
