@@ -8,7 +8,7 @@ node{
     }
 
     stage('Build Docker Image'){
-    	sh 'docker build . -t farhadtx/myrestapp:1.0.0'
+    	sh 'docker build . -t farhadtx/myrestapp:1.0.1'
     }
     
     stage('Push Docker Image'){
