@@ -25,7 +25,7 @@ metadata: # Metadata of the resource kind we are creating
   name: myrestapp-service
 spec:
   selector:
-    app: myrestapp
+    app: myrestapp1
   ports:
     - protocol: "TCP"
       port: 8080 # The port that the service is running on in the cluster
