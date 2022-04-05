@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment # Kubernetes resource kind we are creating
 metadata:
-  name: myrestapp1
+  name: myrestapp
 spec:
   selector:
     matchLabels:
-      app: myrestapp1
+      app: myrestapp
   replicas: 1 # Number of replicas that will be created for this deployment
   template:
     metadata:
       labels:
-        app: myrestapp1
+        app: myrestapp
     spec:
       containers:
-        - name: myrestapp1
-          image: farhadtx/myrestapp1:#BUILD_NUMBER # Image that will be used to containers in the cluster
+        - name: myrestapp
+          image: farhadtx/myrestapp:#BUILD_NUMBER # Image that will be used to containers in the cluster
           imagePullPolicy: Always
           ports:
             - containerPort: 8080 # The port that the container is running on in the cluster
@@ -25,7 +25,7 @@ metadata: # Metadata of the resource kind we are creating
   name: myrestapp-service
 spec:
   selector:
-    app: myrestapp
+    app: myrestapp1
   ports:
     - protocol: "TCP"
       port: 8080 # The port that the service is running on in the cluster
