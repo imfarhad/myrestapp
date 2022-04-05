@@ -25,5 +25,5 @@ public class HelloRestController {
         Movie aMovie = new Movie();
         return aMovie;
     }
-    
+
 }
