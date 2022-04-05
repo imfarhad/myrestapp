@@ -5,12 +5,12 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: myrestapp
+      app: myrestapp1
   replicas: 1 # Number of replicas that will be created for this deployment
   template:
     metadata:
       labels:
-        app: myrestapp
+        app: myrestapp1
     spec:
       containers:
         - name: myrestapp
